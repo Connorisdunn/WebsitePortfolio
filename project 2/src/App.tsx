@@ -8,7 +8,7 @@ import Experience from './pages/Experience';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/WebsitePortfolio">
       <div className="min-h-screen bg-gray-50">
         <Routes>
           <Route path="/" element={<Home />} />
