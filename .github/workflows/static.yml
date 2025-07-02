@@ -35,9 +35,11 @@ jobs:
       
       - name: Install dependencies
         run: npm install
+        working-directory: './project 2'
       
       - name: Build
         run: npm run build
+        working-directory: './project 2'
       
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -46,7 +48,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist folder (build output)
-          path: './dist'
+          path: './project 2/dist'
 
   # Deploy job
   deploy:
