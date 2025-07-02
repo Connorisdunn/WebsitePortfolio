@@ -27,11 +27,9 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-        # Remove: working-directory: './project 2'
       
       - name: Build
         run: npm run build
-        # Remove: working-directory: './project 2'
       
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -39,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'  # Change from './project 2/dist' to './dist'
+          path: './dist'
 
   deploy:
     environment:
