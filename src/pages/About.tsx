@@ -34,7 +34,7 @@ const About: React.FC = () => {
             <div className="md:col-span-1">
               <div className="aspect-square bg-yellow-300 border-4 border-black p-2 flex items-center justify-center overflow-hidden">
                 <img 
-                  src="image.png" 
+                  src={`${import.meta.env.BASE_URL}image.png`}
                   alt="Connor Dunn" 
                   className="w-full h-full object-cover"
                 />
