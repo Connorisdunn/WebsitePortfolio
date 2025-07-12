@@ -50,7 +50,7 @@ const Experience: React.FC = () => {
               <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
               <span className="font-medium uppercase tracking-wider text-sm sm:text-base">Back to Home</span>
             </Link>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-wider text-center sm:text-right leading-tight">
               EXPERIENCE
             </h1>
             <div className="hidden sm:block"></div>
