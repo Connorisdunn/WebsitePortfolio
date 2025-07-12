@@ -8,28 +8,28 @@ const Projects: React.FC = () => {
       title: "Wedding Venue Booking Site",
       description: "A fully responsive website that allows users to explore wedding venues, view detailed photo galleries, select wedding packages, and book dates using a streamlined and intuitive interface. Features include dynamic venue pages, a contact form, and real-time backend integration for booking management through a database.",
       tech: ["React", "TypeScript", "SQL", "Supabase", "Tailwind CSS", "Vite", "Node.js", "Git"],
-      image: "/files_2819202-1751148011169-image.png",
+      image: `${import.meta.env.BASE_URL}files_2819202-1751148011169-image.png`,
       githubUrl: "https://github.com/Connorisdunn/WeddingVenueBookingSite"
     },
     {
       title: "Now I Can Website Redesign",
       description: "Collaborated with a nonprofit to redesign and rebuild their website for improved usability, accessibility, and visual appeal. Features include multi-step booking forms, filterable staff and schedule displays, responsive layouts, and consistent branding using a kid-friendly design system.",
       tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostCSS"],
-      image: "/files_2819202-1751148074689-image.png",
+      image: `${import.meta.env.BASE_URL}files_2819202-1751148074689-image.png`,
       githubUrl: "https://github.com/Connorisdunn/NowICan"
     },
     {
       title: "Chain Golf Store – AI Database Assistant",
       description: "Academic project focused on designing a complete database schema for a golf retail store and integrating it with OpenAI's language model to generate and execute natural language-to-SQL queries. Demonstrates schema design, data population, and intelligent query generation.",
       tech: ["Python", "SQL", "OpenAI API", "Database Design", "AI Prompting", "Data Modeling"],
-      image: "/schema.png",
+      image: `${import.meta.env.BASE_URL}schema.png`,
       githubUrl: "https://github.com/Connorisdunn/ChainGolfStore"
     },
     {
       title: "BYU Course Catalog Redesign",
       description: "Redesigned the outdated BYU course catalog interface to improve clarity, searchability, and user experience. The new version features dynamic course filters, sorting, favoriting, and modern design elements to help students quickly find and compare classes.",
       tech: ["React", "Tailwind CSS", "Vite", "JavaScript", "Git", "Node.js", "PostCSS"],
-      image: "/files_2819202-1751148180289-image.png",
+      image: `${import.meta.env.BASE_URL}files_2819202-1751148180289-image.png`,
       githubUrl: "https://github.com/Connorisdunn/betterbyucatalog"
     }
   ];
@@ -65,6 +65,10 @@ const Projects: React.FC = () => {
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${project.image}`);
+                      e.currentTarget.style.display = 'none';
+                    }}
                   />
                 </div>
                 
