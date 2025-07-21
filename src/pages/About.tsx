@@ -86,6 +86,35 @@ const About: React.FC = () => {
               ))}
             </div>
           </div>
+
+          {/* Resume Download */}
+          <div className="bg-yellow-300 border-2 border-black p-4 sm:p-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider mb-2">
+                  Download Resume
+                </h3>
+                <p className="text-sm sm:text-base font-medium text-black">
+                  Get a copy of my full resume with detailed experience and qualifications.
+                </p>
+              </div>
+              <a
+                href={`${import.meta.env.BASE_URL}Resume.pdf`}
+                download="Connor_Dunn_Resume.pdf"
+                className="flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-sm sm:text-base whitespace-nowrap"
+              >
+                <svg 
+                  className="h-4 w-4 sm:h-5 sm:w-5 mr-2" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download PDF
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
