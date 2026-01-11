@@ -18,7 +18,7 @@ const Connect: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="w-full">
           {/* Header */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 gap-4">
             <Link 
