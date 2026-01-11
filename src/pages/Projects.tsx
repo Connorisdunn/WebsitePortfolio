@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
+import NavigationDropdown from './NavigationDropdown';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -41,13 +41,7 @@ const Projects: React.FC = () => {
           {/* Header - BLUE THEME */}
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-black p-6 sm:p-8 mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <Link 
-                to="/" 
-                className="flex items-center text-black hover:text-blue-700 transition-colors"
-              >
-                <ArrowLeft className="h-6 w-6 sm:h-7 sm:w-7 mr-2" />
-                <span className="font-bold uppercase tracking-wider text-lg sm:text-xl">Back to Home</span>
-              </Link>
+              <NavigationDropdown />
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right text-blue-700">
                 PROJECTS
               </h1>
@@ -75,11 +69,11 @@ const Projects: React.FC = () => {
                 </div>
                 
                 <div className="p-6 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-4 sm:mb-5 leading-tight">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-wider mb-4 sm:mb-5 leading-tight text-gray-900">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-700 mb-5 leading-relaxed text-lg sm:text-xl">
+                  <p className="text-gray-700 mb-5 leading-relaxed text-base sm:text-lg">
                     {project.description}
                   </p>
                   
@@ -87,7 +81,7 @@ const Projects: React.FC = () => {
                     {project.tech.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="bg-yellow-300 text-black px-4 sm:px-5 py-2 text-base sm:text-lg font-medium uppercase tracking-wider border border-black"
+                        className="bg-yellow-300 text-black px-4 sm:px-5 py-2 text-sm sm:text-base font-bold uppercase tracking-wider border border-black"
                       >
                         {tech}
                       </span>
@@ -99,7 +93,7 @@ const Projects: React.FC = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center px-5 sm:px-6 py-3 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-base sm:text-lg"
+                      className="flex items-center px-5 sm:px-6 py-3 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-bold uppercase tracking-wider text-base sm:text-lg"
                     >
                       <Github className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                       View Code
