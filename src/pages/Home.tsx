@@ -96,18 +96,18 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
-          {/* Center yellow logo box - responsive sizing */}
+          {/* Center yellow logo box - MUCH BIGGER and fully responsive */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="bg-gradient-to-br from-yellow-300 via-yellow-400 to-orange-300 border-2 md:border-4 border-black p-2 md:p-3 transform hover:rotate-2 hover:scale-105 transition-all duration-300 shadow-2xl relative select-none cursor-default">
+            <div className="bg-gradient-to-br from-yellow-300 via-yellow-400 to-orange-300 border-3 sm:border-4 md:border-5 lg:border-6 border-black p-4 sm:p-5 md:p-6 lg:p-8 transform hover:rotate-2 hover:scale-105 transition-all duration-300 shadow-2xl relative select-none cursor-default">
               {/* Inner decorative border */}
-              <div className="border-1 md:border-2 border-black p-1 md:p-2 bg-yellow-300/50 backdrop-blur-sm">
+              <div className="border-2 sm:border-3 md:border-4 border-black p-3 sm:p-4 md:p-5 lg:p-6 bg-yellow-300/50 backdrop-blur-sm">
                 <div className="flex items-center justify-center relative">
-                  {/* Static decorative dots - smaller on mobile */}
-                  <div className="absolute -top-0.5 md:-top-1 -right-0.5 md:-right-1 w-1 md:w-1.5 h-1 md:h-1.5 bg-red-500 rounded-full"></div>
-                  <div className="absolute -bottom-0.5 md:-bottom-1 -left-0.5 md:-left-1 w-1 md:w-1.5 h-1 md:h-1.5 bg-blue-500 rounded-full"></div>
+                  {/* Static decorative dots - responsive sizing */}
+                  <div className="absolute -top-1 sm:-top-1.5 md:-top-2 -right-1 sm:-right-1.5 md:-right-2 w-2 sm:w-2.5 md:w-3 h-2 sm:h-2.5 md:h-3 bg-red-500 rounded-full"></div>
+                  <div className="absolute -bottom-1 sm:-bottom-1.5 md:-bottom-2 -left-1 sm:-left-1.5 md:-left-2 w-2 sm:w-2.5 md:w-3 h-2 sm:h-2.5 md:h-3 bg-blue-500 rounded-full"></div>
                   
-                  <Pen className="h-4 md:h-6 w-4 md:w-6 text-black transform rotate-12 hover:rotate-45 transition-transform duration-300" strokeWidth={3} />
-                  <div className="ml-1 md:ml-2 text-black font-black text-xs md:text-sm tracking-wider">
+                  <Pen className="h-8 sm:h-10 md:h-12 lg:h-16 w-8 sm:w-10 md:w-12 lg:w-16 text-black transform rotate-12 hover:rotate-45 transition-transform duration-300" strokeWidth={3} />
+                  <div className="ml-2 sm:ml-3 md:ml-4 text-black font-black text-sm sm:text-base md:text-lg lg:text-xl tracking-wider leading-tight">
                     CONNOR DUNN'S<br />PORTFOLIO
                   </div>
                 </div>
