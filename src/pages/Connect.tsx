@@ -17,7 +17,8 @@ const Connect: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-8">
+      <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-6 lg:px-8">
+        {/* Changed from max-w-6xl mx-auto to w-full */}
         <div className="w-full">
           {/* Header */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 gap-4">
@@ -34,7 +35,8 @@ const Connect: React.FC = () => {
             <div className="hidden sm:block"></div>
           </div>
 
-          <div className="max-w-2xl mx-auto space-y-6 sm:space-y-8">
+          {/* Added max-w-3xl mx-auto to center the content cards but still wider than before */}
+          <div className="max-w-3xl mx-auto space-y-6 sm:space-y-8">
             {/* Contact Details */}
             <div className="bg-white border-2 border-black p-4 sm:p-8">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider mb-4 sm:mb-6">
