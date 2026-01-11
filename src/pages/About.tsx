@@ -12,7 +12,6 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-6 lg:px-8">
-        {/* Removed max-w-4xl to allow full width */}
         <div className="w-full">
           {/* Header - GREEN THEME */}
           <div className="bg-gradient-to-tr from-green-50 to-emerald-100 border-2 border-black p-6 sm:p-8 mb-8 sm:mb-12">
@@ -21,8 +20,8 @@ const About: React.FC = () => {
                 to="/" 
                 className="flex items-center text-black hover:text-green-700 transition-colors"
               >
-                <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
-                <span className="font-bold uppercase tracking-wider text-base sm:text-lg">Back to Home</span>
+                <ArrowLeft className="h-6 w-6 sm:h-7 sm:w-7 mr-2" />
+                <span className="font-bold uppercase tracking-wider text-lg sm:text-xl">Back to Home</span>
               </Link>
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right leading-tight text-green-700">
                 ABOUT ME
@@ -46,12 +45,12 @@ const About: React.FC = () => {
             
             {/* Bio */}
             <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-              <div className="bg-white border-2 border-black p-4 sm:p-8">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4 sm:mb-6">
+              <div className="bg-white border-2 border-black p-6 sm:p-10">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 sm:mb-8">
                   Data Analyst & Problem Solver
                 </h2>
                 
-                <div className="space-y-3 sm:space-y-4 text-base sm:text-lg md:text-xl leading-relaxed">
+                <div className="space-y-4 sm:space-y-5 text-lg sm:text-xl md:text-2xl leading-relaxed">
                   <p>
                     I'm a data analyst with a passion for uncovering insights that make a difference. With a bachelor's degree in computer science and a minor in statistics from Brigham Young University. I combine technical precision with a strong sense for visual storytelling; making complex data not just understandable, but impactful.
                   </p>
@@ -73,16 +72,16 @@ const About: React.FC = () => {
           </div>
 
           {/* Skills */}
-          <div className="bg-white border-2 border-black p-4 sm:p-8 mb-6 sm:mb-8">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-4 sm:mb-6">
+          <div className="bg-white border-2 border-black p-6 sm:p-10 mb-6 sm:mb-8">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 sm:mb-8">
               Skills & Expertise
             </h3>
             
-            <div className="flex flex-wrap gap-2 sm:gap-3">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               {skills.map((skill, index) => (
                 <span 
                   key={index}
-                  className="bg-yellow-300 text-black px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 font-medium uppercase tracking-wider border-2 border-black text-sm sm:text-base"
+                  className="bg-yellow-300 text-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 font-medium uppercase tracking-wider border-2 border-black text-base sm:text-lg"
                 >
                   {skill}
                 </span>
@@ -91,23 +90,23 @@ const About: React.FC = () => {
           </div>
 
           {/* Resume Download */}
-          <div className="bg-yellow-300 border-2 border-black p-4 sm:p-8">
+          <div className="bg-yellow-300 border-2 border-black p-6 sm:p-10">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-2">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-3">
                   Download Resume
                 </h3>
-                <p className="text-base sm:text-lg font-medium text-black">
+                <p className="text-lg sm:text-xl font-medium text-black">
                   Get a copy of my full resume with detailed experience and qualifications.
                 </p>
               </div>
               <a
                 href={`${import.meta.env.BASE_URL}Resume.pdf`}
                 download="Connor_Dunn_Resume.pdf"
-                className="flex items-center px-5 sm:px-7 py-3 sm:py-4 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-base sm:text-lg whitespace-nowrap"
+                className="flex items-center px-6 sm:px-8 py-3.5 sm:py-4 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-lg sm:text-xl whitespace-nowrap"
               >
                 <svg 
-                  className="h-5 w-5 sm:h-6 sm:w-6 mr-2" 
+                  className="h-6 w-6 sm:h-7 sm:w-7 mr-2" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
