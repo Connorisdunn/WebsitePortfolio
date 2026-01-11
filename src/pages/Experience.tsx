@@ -1,6 +1,6 @@
 import React from 'react';
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
-import NavigationDropdown from './NavigationDropdown';
+import { Link } from 'react-router-dom';
+import { ArrowLeft, Calendar, MapPin, ExternalLink } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const experiences = [
@@ -47,7 +47,13 @@ const Experience: React.FC = () => {
           {/* Header - PURPLE THEME */}
           <div className="bg-gradient-to-tl from-purple-50 to-violet-100 border-2 border-black p-6 sm:p-8 mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <NavigationDropdown />
+              <Link 
+                to="/" 
+                className="flex items-center text-black hover:text-purple-700 transition-colors"
+              >
+                <ArrowLeft className="h-6 w-6 sm:h-7 sm:w-7 mr-2" />
+                <span className="font-bold uppercase tracking-wider text-lg sm:text-xl">Back to Home</span>
+              </Link>
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right leading-tight text-purple-700">
                 EXPERIENCE
               </h1>
