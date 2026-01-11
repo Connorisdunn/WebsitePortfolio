@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Send } from 'lucide-react';
-import NavigationDropdown from './NavigationDropdown';
+import { Link } from 'react-router-dom';
+import { ArrowLeft, Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Send } from 'lucide-react';
 
 const Connect: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -48,7 +48,13 @@ const Connect: React.FC = () => {
           {/* Header - PINK THEME */}
           <div className="bg-gradient-to-bl from-pink-50 to-pink-100 border-2 border-black p-6 sm:p-8 mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <NavigationDropdown />
+              <Link 
+                to="/" 
+                className="flex items-center text-black hover:text-pink-700 transition-colors"
+              >
+                <ArrowLeft className="h-6 w-6 sm:h-7 sm:w-7 mr-2" />
+                <span className="font-bold uppercase tracking-wider text-lg sm:text-xl">Back to Home</span>
+              </Link>
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right text-pink-700">
                 CONNECT
               </h1>
@@ -62,7 +68,7 @@ const Connect: React.FC = () => {
               <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 text-gray-900">
                 Send a Message
               </h3>
-                
+              
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
@@ -146,8 +152,6 @@ const Connect: React.FC = () => {
               </form>
             </div>
 
-            {/* Contact Info & Social - Three Column Grid */}
-            <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {/* Contact Info & Social - Three Column Grid */}
             <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
               {/* Contact Details */}
