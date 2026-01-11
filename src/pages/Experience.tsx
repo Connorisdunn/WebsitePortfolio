@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import NavigationDropdown from './NavigationDropdown';
 
 const Experience: React.FC = () => {
   const experiences = [
     {
       title: "AP Engineer",
       company: "Tesla",
+      companyLogo: "https://logo.clearbit.com/tesla.com",
       location: "Draper, UT",
       period: "April 2025 - Current",
       bullets: [
@@ -18,6 +19,7 @@ const Experience: React.FC = () => {
     {
       title: "IT Technician & Analyst",
       company: "BYU OIT Dept.",
+      companyLogo: "https://logo.clearbit.com/byu.edu",
       location: "Provo, UT",
       period: "August 2023 - April 2025",
       bullets: [
@@ -32,6 +34,7 @@ const Experience: React.FC = () => {
     {
       degree: "Bachelor of Science, Major of Computer Science, Minor of Statistics",
       school: "Brigham Young University, Provo",
+      schoolLogo: "https://logo.clearbit.com/byu.edu",
       location: "Provo, UT",
       period: "2020 - 2025"
     }
@@ -44,13 +47,7 @@ const Experience: React.FC = () => {
           {/* Header - PURPLE THEME */}
           <div className="bg-gradient-to-tl from-purple-50 to-violet-100 border-2 border-black p-6 sm:p-8 mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <Link 
-                to="/" 
-                className="flex items-center text-black hover:text-purple-700 transition-colors"
-              >
-                <ArrowLeft className="h-6 w-6 sm:h-7 sm:w-7 mr-2" />
-                <span className="font-bold uppercase tracking-wider text-lg sm:text-xl">Back to Home</span>
-              </Link>
+              <NavigationDropdown />
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right leading-tight text-purple-700">
                 EXPERIENCE
               </h1>
@@ -60,29 +57,44 @@ const Experience: React.FC = () => {
 
           {/* Education */}
           <div className="mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 sm:mb-8 pb-2 sm:pb-4 border-b-2 border-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 pb-2 sm:pb-4 border-b-2 border-black text-gray-900">
               Education
             </h2>
             
             <div className="space-y-4 sm:space-y-6">
               {education.map((edu, index) => (
                 <div key={index} className="bg-white border-2 border-black p-6 sm:p-10">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-2 sm:mb-4">
-                    <div className="mb-3 lg:mb-0">
-                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider text-black mb-2 leading-tight">
+                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+                    {/* Logo */}
+                    <div className="flex-shrink-0">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white border-2 border-black p-3 flex items-center justify-center">
+                        <img 
+                          src={edu.schoolLogo} 
+                          alt={`${edu.school} logo`}
+                          className="w-full h-full object-contain"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-wider text-gray-900 mb-2 leading-tight">
                         {edu.degree}
                       </h3>
-                      <div className="text-xl sm:text-2xl font-semibold text-gray-700 mb-2">
+                      <div className="text-xl sm:text-2xl font-bold text-gray-700 mb-2">
                         {edu.school}
                       </div>
                     </div>
                     
                     <div className="flex flex-col lg:items-end space-y-1">
-                      <div className="flex items-center text-base sm:text-lg font-medium uppercase tracking-wider text-gray-600">
+                      <div className="flex items-center text-base sm:text-lg font-semibold uppercase tracking-wider text-gray-600">
                         <Calendar className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                         {edu.period}
                       </div>
-                      <div className="flex items-center text-base sm:text-lg font-medium uppercase tracking-wider text-gray-600">
+                      <div className="flex items-center text-base sm:text-lg font-semibold uppercase tracking-wider text-gray-600">
                         <MapPin className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                         {edu.location}
                       </div>
@@ -95,30 +107,46 @@ const Experience: React.FC = () => {
 
           {/* Professional Experience */}
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 sm:mb-8 pb-2 sm:pb-4 border-b-2 border-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 pb-2 sm:pb-4 border-b-2 border-black text-gray-900">
               Professional Experience
             </h2>
             
             <div className="space-y-6 sm:space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="bg-white border-2 border-black p-6 sm:p-10 relative">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-5 sm:mb-7">
-                    <div className="mb-3 lg:mb-0">
-                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider text-black mb-2 leading-tight">
+                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-5 sm:mb-7">
+                    {/* Logo */}
+                    <div className="flex-shrink-0">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white border-2 border-black p-3 flex items-center justify-center">
+                        <img 
+                          src={exp.companyLogo} 
+                          alt={`${exp.company} logo`}
+                          className="w-full h-full object-contain"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Title and Company */}
+                    <div className="flex-1">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-wider text-gray-900 mb-2 leading-tight">
                         {exp.title}
                       </h3>
-                      <div className="flex items-center text-xl sm:text-2xl font-semibold text-gray-700 mb-2">
+                      <div className="flex items-center text-xl sm:text-2xl font-bold text-gray-700 mb-2">
                         <ExternalLink className="h-6 w-6 sm:h-7 sm:w-7 mr-2" />
                         {exp.company}
                       </div>
                     </div>
                     
+                    {/* Dates and Location */}
                     <div className="flex flex-col lg:items-end space-y-1">
-                      <div className="flex items-center text-base sm:text-lg font-medium uppercase tracking-wider text-gray-600">
+                      <div className="flex items-center text-base sm:text-lg font-semibold uppercase tracking-wider text-gray-600">
                         <Calendar className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                         {exp.period}
                       </div>
-                      <div className="flex items-center text-base sm:text-lg font-medium uppercase tracking-wider text-gray-600">
+                      <div className="flex items-center text-base sm:text-lg font-semibold uppercase tracking-wider text-gray-600">
                         <MapPin className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                         {exp.location}
                       </div>
@@ -129,7 +157,7 @@ const Experience: React.FC = () => {
                     {exp.bullets.map((bullet, bulletIndex) => (
                       <li key={bulletIndex} className="flex items-start">
                         <div className="w-2.5 h-2.5 bg-yellow-300 border border-black mt-2 mr-4 flex-shrink-0"></div>
-                        <span className="text-lg sm:text-xl text-gray-700 leading-relaxed">{bullet}</span>
+                        <span className="text-base sm:text-lg text-gray-700 leading-relaxed">{bullet}</span>
                       </li>
                     ))}
                   </ul>
