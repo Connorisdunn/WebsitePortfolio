@@ -14,19 +14,21 @@ const About: React.FC = () => {
       <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-6 lg:px-8">
         {/* Removed max-w-4xl to allow full width */}
         <div className="w-full">
-          {/* Header */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 gap-4">
-            <Link 
-              to="/" 
-              className="flex items-center text-black hover:text-gray-600 transition-colors"
-            >
-              <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
-              <span className="font-medium uppercase tracking-wider text-sm sm:text-base">Back to Home</span>
-            </Link>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right leading-tight">
-              ABOUT ME
-            </h1>
-            <div className="hidden sm:block"></div>
+          {/* Header - GREEN THEME */}
+          <div className="bg-gradient-to-tr from-green-50 to-emerald-100 border-2 border-black p-6 sm:p-8 mb-8 sm:mb-12">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <Link 
+                to="/" 
+                className="flex items-center text-black hover:text-green-700 transition-colors"
+              >
+                <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
+                <span className="font-bold uppercase tracking-wider text-base sm:text-lg">Back to Home</span>
+              </Link>
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right leading-tight text-green-700">
+                ABOUT ME
+              </h1>
+              <div className="hidden sm:block"></div>
+            </div>
           </div>
 
           {/* Main Content */}
@@ -45,24 +47,24 @@ const About: React.FC = () => {
             {/* Bio */}
             <div className="lg:col-span-2 space-y-4 sm:space-y-6">
               <div className="bg-white border-2 border-black p-4 sm:p-8">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-4 sm:mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4 sm:mb-6">
                   Data Analyst & Problem Solver
                 </h2>
                 
-                <div className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
-                  <p className="leading-relaxed">
+                <div className="space-y-3 sm:space-y-4 text-base sm:text-lg md:text-xl leading-relaxed">
+                  <p>
                     I'm a data analyst with a passion for uncovering insights that make a difference. With a bachelor's degree in computer science and a minor in statistics from Brigham Young University. I combine technical precision with a strong sense for visual storytelling; making complex data not just understandable, but impactful.
                   </p>
                   
-                  <p className="leading-relaxed">
+                  <p>
                     Before diving into data, I served as a full-time volunteer representative for The Church of Jesus Christ of Latter-Day Saints in Mexico, where I led and trained teams of up to 50 individuals, conducted humanitarian service, and became fluent in Spanish. That experience shaped my ability to lead with empathy, think strategically, and communicate across cultures; skills I bring into every data-driven project.
                   </p>
                   
-                  <p className="leading-relaxed">
+                  <p>
                     I thrive on the analytical side of data, but I'm equally drawn to the visual narrative it creates. My goal is simple: use data to drive smart decisions, spark innovation, and help shape a better future.
                   </p>
                   
-                  <p className="leading-relaxed">
+                  <p>
                     When I'm not analyzing data, you'll likely find me on the golf course; enjoying the challenge, focus, and strategy that both data and golf have in common.
                   </p>
                 </div>
@@ -72,7 +74,7 @@ const About: React.FC = () => {
 
           {/* Skills */}
           <div className="bg-white border-2 border-black p-4 sm:p-8 mb-6 sm:mb-8">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider mb-4 sm:mb-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-4 sm:mb-6">
               Skills & Expertise
             </h3>
             
@@ -80,7 +82,7 @@ const About: React.FC = () => {
               {skills.map((skill, index) => (
                 <span 
                   key={index}
-                  className="bg-yellow-300 text-black px-2 sm:px-3 md:px-4 py-1 sm:py-2 font-medium uppercase tracking-wider border-2 border-black text-xs sm:text-sm"
+                  className="bg-yellow-300 text-black px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 font-medium uppercase tracking-wider border-2 border-black text-sm sm:text-base"
                 >
                   {skill}
                 </span>
@@ -92,20 +94,20 @@ const About: React.FC = () => {
           <div className="bg-yellow-300 border-2 border-black p-4 sm:p-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider mb-2">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-2">
                   Download Resume
                 </h3>
-                <p className="text-sm sm:text-base font-medium text-black">
+                <p className="text-base sm:text-lg font-medium text-black">
                   Get a copy of my full resume with detailed experience and qualifications.
                 </p>
               </div>
               <a
                 href={`${import.meta.env.BASE_URL}Resume.pdf`}
                 download="Connor_Dunn_Resume.pdf"
-                className="flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-sm sm:text-base whitespace-nowrap"
+                className="flex items-center px-5 sm:px-7 py-3 sm:py-4 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-base sm:text-lg whitespace-nowrap"
               >
                 <svg 
-                  className="h-4 w-4 sm:h-5 sm:w-5 mr-2" 
+                  className="h-5 w-5 sm:h-6 sm:w-6 mr-2" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
