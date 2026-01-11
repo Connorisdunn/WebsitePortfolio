@@ -18,7 +18,6 @@ const Connect: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-6 lg:px-8">
-        {/* Changed from max-w-6xl mx-auto to w-full */}
         <div className="w-full">
           {/* Header - PINK THEME */}
           <div className="bg-gradient-to-bl from-pink-50 to-pink-100 border-2 border-black p-6 sm:p-8 mb-8 sm:mb-12">
@@ -27,8 +26,8 @@ const Connect: React.FC = () => {
                 to="/" 
                 className="flex items-center text-black hover:text-pink-700 transition-colors"
               >
-                <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
-                <span className="font-bold uppercase tracking-wider text-base sm:text-lg">Back to Home</span>
+                <ArrowLeft className="h-6 w-6 sm:h-7 sm:w-7 mr-2" />
+                <span className="font-bold uppercase tracking-wider text-lg sm:text-xl">Back to Home</span>
               </Link>
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right text-pink-700">
                 CONNECT
@@ -37,29 +36,28 @@ const Connect: React.FC = () => {
             </div>
           </div>
 
-          {/* Added max-w-3xl mx-auto to center the content cards but still wider than before */}
           <div className="max-w-3xl mx-auto space-y-6 sm:space-y-8">
             {/* Contact Details */}
             <div className="bg-white border-2 border-black p-6 sm:p-10">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-6 sm:mb-8">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 sm:mb-8">
                 Get In Touch
               </h3>
               
-              <div className="space-y-5 sm:space-y-7">
+              <div className="space-y-6 sm:space-y-8">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
                     href={info.href}
                     className="flex items-center group hover:text-gray-600 transition-colors"
                   >
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-yellow-300 border-2 border-black flex items-center justify-center mr-4 sm:mr-5 group-hover:bg-yellow-400 transition-colors">
-                      <info.icon className="h-6 w-6 sm:h-7 sm:w-7 text-black" strokeWidth={2} />
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-yellow-300 border-2 border-black flex items-center justify-center mr-5 sm:mr-6 group-hover:bg-yellow-400 transition-colors">
+                      <info.icon className="h-7 w-7 sm:h-8 sm:w-8 text-black" strokeWidth={2} />
                     </div>
                     <div>
-                      <div className="text-sm sm:text-base font-medium uppercase tracking-wider text-gray-600">
+                      <div className="text-base sm:text-lg font-medium uppercase tracking-wider text-gray-600">
                         {info.label}
                       </div>
-                      <div className="text-lg sm:text-xl font-semibold text-black break-all sm:break-normal">
+                      <div className="text-xl sm:text-2xl font-semibold text-black break-all sm:break-normal">
                         {info.value}
                       </div>
                     </div>
@@ -70,7 +68,7 @@ const Connect: React.FC = () => {
 
             {/* Social Links */}
             <div className="bg-white border-2 border-black p-6 sm:p-10">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-6 sm:mb-8">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-6 sm:mb-8">
                 Follow Me
               </h3>
               
@@ -81,10 +79,10 @@ const Connect: React.FC = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 sm:w-14 sm:h-14 bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors border-2 border-black"
+                    className="w-14 h-14 sm:w-16 sm:h-16 bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors border-2 border-black"
                     aria-label={social.label}
                   >
-                    <social.icon className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
+                    <social.icon className="h-7 w-7 sm:h-8 sm:w-8" strokeWidth={2} />
                   </a>
                 ))}
               </div>
@@ -92,10 +90,10 @@ const Connect: React.FC = () => {
 
             {/* Availability */}
             <div className="bg-yellow-300 border-2 border-black p-6 sm:p-10">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-4 sm:mb-5">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4 sm:mb-5">
                 Availability
               </h3>
-              <p className="text-lg sm:text-xl font-medium text-black leading-relaxed">
+              <p className="text-xl sm:text-2xl font-medium text-black leading-relaxed">
                 Currently available for new roles and collaborations. 
                 Let's create something special!
               </p>
