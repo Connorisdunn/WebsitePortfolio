@@ -11,8 +11,9 @@ const About: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-8">
-        <div className="max-w-4xl mx-auto">
+      <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-6 lg:px-8">
+        {/* Removed max-w-4xl to allow full width */}
+        <div className="w-full">
           {/* Header */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 gap-4">
             <Link 
@@ -29,10 +30,10 @@ const About: React.FC = () => {
           </div>
 
           {/* Main Content */}
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-3 mb-12 sm:mb-16">
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-3 mb-12 sm:mb-16">
             {/* Profile Image */}
-            <div className="md:col-span-1">
-              <div className="aspect-square bg-yellow-300 border-4 border-black p-2 flex items-center justify-center overflow-hidden">
+            <div className="lg:col-span-1">
+              <div className="aspect-square bg-yellow-300 border-4 border-black p-2 flex items-center justify-center overflow-hidden max-w-md mx-auto lg:max-w-none">
                 <img 
                   src={`${import.meta.env.BASE_URL}image.png`}
                   alt="Connor Dunn" 
@@ -42,7 +43,7 @@ const About: React.FC = () => {
             </div>
             
             {/* Bio */}
-            <div className="md:col-span-2 space-y-4 sm:space-y-6">
+            <div className="lg:col-span-2 space-y-4 sm:space-y-6">
               <div className="bg-white border-2 border-black p-4 sm:p-8">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-4 sm:mb-6">
                   Data Analyst & Problem Solver
@@ -70,7 +71,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Skills */}
-          <div className="bg-white border-2 border-black p-4 sm:p-8">
+          <div className="bg-white border-2 border-black p-4 sm:p-8 mb-6 sm:mb-8">
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider mb-4 sm:mb-6">
               Skills & Expertise
             </h3>
