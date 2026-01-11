@@ -37,7 +37,6 @@ const Projects: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-6 lg:px-8">
-        {/* Changed from max-w-6xl mx-auto to w-full */}
         <div className="w-full">
           {/* Header - BLUE THEME */}
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-black p-6 sm:p-8 mb-8 sm:mb-12">
@@ -46,8 +45,8 @@ const Projects: React.FC = () => {
                 to="/" 
                 className="flex items-center text-black hover:text-blue-700 transition-colors"
               >
-                <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
-                <span className="font-bold uppercase tracking-wider text-base sm:text-lg">Back to Home</span>
+                <ArrowLeft className="h-6 w-6 sm:h-7 sm:w-7 mr-2" />
+                <span className="font-bold uppercase tracking-wider text-lg sm:text-xl">Back to Home</span>
               </Link>
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right text-blue-700">
                 PROJECTS
@@ -75,20 +74,20 @@ const Projects: React.FC = () => {
                   />
                 </div>
                 
-                <div className="p-5 sm:p-7">
+                <div className="p-6 sm:p-8">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-4 sm:mb-5 leading-tight">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-700 mb-5 leading-relaxed text-base sm:text-lg">
+                  <p className="text-gray-700 mb-5 leading-relaxed text-lg sm:text-xl">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mb-5 sm:mb-7">
+                  <div className="flex flex-wrap gap-2.5 mb-6 sm:mb-8">
                     {project.tech.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="bg-yellow-300 text-black px-3 sm:px-4 py-1.5 text-sm sm:text-base font-medium uppercase tracking-wider border border-black"
+                        className="bg-yellow-300 text-black px-4 sm:px-5 py-2 text-base sm:text-lg font-medium uppercase tracking-wider border border-black"
                       >
                         {tech}
                       </span>
@@ -100,9 +99,9 @@ const Projects: React.FC = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center px-4 sm:px-5 py-2.5 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-sm sm:text-base"
+                      className="flex items-center px-5 sm:px-6 py-3 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-base sm:text-lg"
                     >
-                      <Github className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                      <Github className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                       View Code
                     </a>
                   </div>
