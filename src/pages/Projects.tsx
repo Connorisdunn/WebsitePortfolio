@@ -39,19 +39,21 @@ const Projects: React.FC = () => {
       <div className="pt-4 sm:pt-8 pb-8 px-4 sm:px-6 lg:px-8">
         {/* Changed from max-w-6xl mx-auto to w-full */}
         <div className="w-full">
-          {/* Header */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 gap-4">
-            <Link 
-              to="/" 
-              className="flex items-center text-black hover:text-gray-600 transition-colors"
-            >
-              <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
-              <span className="font-medium uppercase tracking-wider text-sm sm:text-base">Back to Home</span>
-            </Link>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right">
-              PROJECTS
-            </h1>
-            <div className="hidden sm:block"></div>
+          {/* Header - BLUE THEME */}
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-black p-6 sm:p-8 mb-8 sm:mb-12">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <Link 
+                to="/" 
+                className="flex items-center text-black hover:text-blue-700 transition-colors"
+              >
+                <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
+                <span className="font-bold uppercase tracking-wider text-base sm:text-lg">Back to Home</span>
+              </Link>
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-wider text-center sm:text-right text-blue-700">
+                PROJECTS
+              </h1>
+              <div className="hidden sm:block"></div>
+            </div>
           </div>
 
           {/* Projects Grid */}
@@ -73,20 +75,20 @@ const Projects: React.FC = () => {
                   />
                 </div>
                 
-                <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider mb-3 sm:mb-4 leading-tight">
+                <div className="p-5 sm:p-7">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider mb-4 sm:mb-5 leading-tight">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-700 mb-4 leading-relaxed text-sm sm:text-base">
+                  <p className="text-gray-700 mb-5 leading-relaxed text-base sm:text-lg">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
+                  <div className="flex flex-wrap gap-2 mb-5 sm:mb-7">
                     {project.tech.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="bg-yellow-300 text-black px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium uppercase tracking-wider border border-black"
+                        className="bg-yellow-300 text-black px-3 sm:px-4 py-1.5 text-sm sm:text-base font-medium uppercase tracking-wider border border-black"
                       >
                         {tech}
                       </span>
@@ -98,9 +100,9 @@ const Projects: React.FC = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center px-3 sm:px-4 py-2 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-xs sm:text-sm"
+                      className="flex items-center px-4 sm:px-5 py-2.5 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-medium uppercase tracking-wider text-sm sm:text-base"
                     >
-                      <Github className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
+                      <Github className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                       View Code
                     </a>
                   </div>
