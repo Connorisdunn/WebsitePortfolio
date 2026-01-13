@@ -19,7 +19,7 @@ const Experience: React.FC = () => {
     {
       title: "IT Technician & Analyst",
       company: "BYU OIT Dept.",
-      companyLogo: "/byu_monogram.svg",
+      companyLogo: `${import.meta.env.BASE_URL}byu_monogram.svg`,
       location: "Provo, UT",
       period: "August 2023 - April 2025",
       bullets: [
@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
     {
       degree: "Bachelor of Science, Major of Computer Science, Minor of Statistics",
       school: "Brigham Young University, Provo",
-      schoolLogo: "/byu_monogram.svg",
+      schoolLogo: `${import.meta.env.BASE_URL}byu_monogram.svg`,
       location: "Provo, UT",
       period: "2020 - 2025"
     }
