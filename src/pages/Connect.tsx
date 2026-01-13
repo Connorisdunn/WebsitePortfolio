@@ -68,7 +68,7 @@ const Connect: React.FC = () => {
             </div>
           </div>
 
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-none mx-auto">
             <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
               {/* Left Column - Contact Form */}
               <div className="bg-white border-2 border-black p-6 sm:p-10">
