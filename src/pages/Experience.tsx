@@ -7,7 +7,7 @@ const Experience: React.FC = () => {
     {
       title: "AP Engineer",
       company: "Tesla",
-      companyLogo: "https://logo.clearbit.com/tesla.com",
+      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg",
       location: "Draper, UT",
       period: "April 2025 - Current",
       bullets: [
@@ -19,7 +19,7 @@ const Experience: React.FC = () => {
     {
       title: "IT Technician & Analyst",
       company: "BYU OIT Dept.",
-      companyLogo: "https://logo.clearbit.com/byu.edu",
+      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Brigham_Young_University_medallion.svg",
       location: "Provo, UT",
       period: "August 2023 - April 2025",
       bullets: [
@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
     {
       degree: "Bachelor of Science, Major of Computer Science, Minor of Statistics",
       school: "Brigham Young University, Provo",
-      schoolLogo: "https://logo.clearbit.com/byu.edu",
+      schoolLogo: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Brigham_Young_University_medallion.svg",
       location: "Provo, UT",
       period: "2020 - 2025"
     }
