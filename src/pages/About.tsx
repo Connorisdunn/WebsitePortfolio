@@ -69,7 +69,7 @@ const About: React.FC = () => {
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-3 mb-12 sm:mb-16">
             {/* Profile Image */}
             <div className="lg:col-span-1">
-              <div className="aspect-square bg-yellow-300 border-4 border-black p-2 flex items-center justify-center overflow-hidden max-w-md mx-auto lg:max-w-none">
+              <div className="aspect-square bg-yellow-300 border-4 border-black p-2 flex items-center justify-center overflow-hidden max-w-md mx-auto lg:max-w-none mb-6 sm:mb-8 lg:mb-0">
                 <img 
                   src={`${import.meta.env.BASE_URL}image.png`}
                   alt="Connor Dunn" 
@@ -78,8 +78,9 @@ const About: React.FC = () => {
               </div>
             </div>
             
-            {/* Bio */}
-            <div className="lg:col-span-2 space-y-4 sm:space-y-6">
+            {/* Bio and Timeline Column */}
+            <div className="lg:col-span-2 space-y-6 sm:space-y-8">
+              {/* Bio */}
               <div className="bg-white border-2 border-black p-6 sm:p-10">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 text-gray-900">
                   Data Analyst & Problem Solver
@@ -103,51 +104,51 @@ const About: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Journey Timeline - NEW SECTION */}
-          <div className="bg-white border-2 border-black p-6 sm:p-10 mb-6 sm:mb-8">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-8 sm:mb-12 text-gray-900">
-              My Journey
-            </h3>
-            
-            <div className="relative">
-              {/* Vertical line */}
-              <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
-              
-              <div className="space-y-8 sm:space-y-10">
-                {timeline.map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={index} className="relative flex items-start gap-6">
-                      {/* Icon container */}
-                      <div className={`${item.color} w-16 h-16 flex-shrink-0 border-3 border-black flex items-center justify-center relative z-10`}>
-                        <Icon className="h-8 w-8 text-white" strokeWidth={2.5} />
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="flex-1 pb-2">
-                        <div className="bg-gray-50 border-2 border-black p-5 sm:p-6">
-                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                            <div className="font-black text-2xl sm:text-3xl uppercase tracking-wider text-gray-900">
-                              {item.title}
-                            </div>
-                            <div className="font-bold text-lg sm:text-xl text-gray-600 mt-1 sm:mt-0">
-                              {item.year}
+              {/* Journey Timeline - Now in same column */}
+              <div className="bg-white border-2 border-black p-6 sm:p-10">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 text-gray-900">
+                  My Journey
+                </h3>
+                
+                <div className="relative">
+                  {/* Vertical line */}
+                  <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+                  
+                  <div className="space-y-6 sm:space-y-8">
+                    {timeline.map((item, index) => {
+                      const Icon = item.icon;
+                      return (
+                        <div key={index} className="relative flex items-start gap-4 sm:gap-6">
+                          {/* Icon container */}
+                          <div className={`${item.color} w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 border-2 border-black flex items-center justify-center relative z-10`}>
+                            <Icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" strokeWidth={2.5} />
+                          </div>
+                          
+                          {/* Content */}
+                          <div className="flex-1 pb-2">
+                            <div className="bg-gray-50 border-2 border-black p-4 sm:p-5">
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <div className="font-black text-xl sm:text-2xl uppercase tracking-wider text-gray-900">
+                                  {item.title}
+                                </div>
+                                <div className="font-bold text-base sm:text-lg text-gray-600 mt-1 sm:mt-0">
+                                  {item.year}
+                                </div>
+                              </div>
+                              <div className="font-semibold text-lg sm:text-xl text-gray-700 mb-2">
+                                {item.organization}
+                              </div>
+                              <p className="text-sm sm:text-base text-gray-600">
+                                {item.description}
+                              </p>
                             </div>
                           </div>
-                          <div className="font-semibold text-xl sm:text-2xl text-gray-700 mb-2">
-                            {item.organization}
-                          </div>
-                          <p className="text-base sm:text-lg text-gray-600">
-                            {item.description}
-                          </p>
                         </div>
-                      </div>
-                    </div>
-                  );
-                })}
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
