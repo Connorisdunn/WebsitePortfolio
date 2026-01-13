@@ -3,13 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Send } from 'lucide-react';
 
 const Connect: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "connorisdunn@gmail.com", href: "mailto:connorisdunn@gmail.com" },
@@ -23,15 +17,34 @@ const Connect: React.FC = () => {
     { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/connor_a_dunn/" },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
-    // For now, we'll simulate a successful submission
-    setFormStatus('success');
-    setTimeout(() => {
-      setFormStatus('idle');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 3000);
+    setFormStatus('submitting');
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mgooenew', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        form.reset();
+        setTimeout(() => setFormStatus('idle'), 5000);
+      } else {
+        setFormStatus('error');
+        setTimeout(() => setFormStatus('idle'), 5000);
+      }
+    } catch (error) {
+      setFormStatus('error');
+      setTimeout(() => setFormStatus('idle'), 5000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -80,8 +93,6 @@ const Connect: React.FC = () => {
                       id="name"
                       name="name"
                       required
-                      value={formData.name}
-                      onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-black text-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                       placeholder="Your name"
                     />
@@ -96,8 +107,6 @@ const Connect: React.FC = () => {
                       id="email"
                       name="email"
                       required
-                      value={formData.email}
-                      onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-black text-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                       placeholder="your.email@example.com"
                     />
@@ -113,8 +122,6 @@ const Connect: React.FC = () => {
                     id="subject"
                     name="subject"
                     required
-                    value={formData.subject}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-black text-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                     placeholder="What's this about?"
                   />
@@ -128,8 +135,6 @@ const Connect: React.FC = () => {
                     id="message"
                     name="message"
                     required
-                    value={formData.message}
-                    onChange={handleChange}
                     rows={5}
                     className="w-full px-4 py-3 border-2 border-black text-lg focus:outline-none focus:ring-2 focus:ring-pink-500 resize-none"
                     placeholder="Tell me about your project or inquiry..."
@@ -142,12 +147,19 @@ const Connect: React.FC = () => {
                   </div>
                 )}
 
+                {formStatus === 'error' && (
+                  <div className="bg-red-100 border-2 border-red-600 text-red-800 px-5 py-4 font-semibold text-lg">
+                    Oops! Something went wrong. Please try again.
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center px-8 py-4 bg-pink-600 text-white hover:bg-pink-700 transition-colors border-2 border-black font-bold uppercase tracking-wider text-xl"
+                  disabled={formStatus === 'submitting'}
+                  className="w-full flex items-center justify-center px-8 py-4 bg-pink-600 text-white hover:bg-pink-700 transition-colors border-2 border-black font-bold uppercase tracking-wider text-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send className="h-6 w-6 mr-3" />
-                  Send Message
+                  {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
