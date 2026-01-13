@@ -19,7 +19,7 @@ const Experience: React.FC = () => {
     {
       title: "IT Technician & Analyst",
       company: "BYU OIT Dept.",
-      companyLogo: "https://www.byu.edu/themes/custom/byu2017_frontend/images/byu-logo.svg",
+      companyLogo: "https://logos-world.net/wp-content/uploads/2022/01/BYU-Cougars-Logo.png",
       location: "Provo, UT",
       period: "August 2023 - April 2025",
       bullets: [
@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
     {
       degree: "Bachelor of Science, Major of Computer Science, Minor of Statistics",
       school: "Brigham Young University, Provo",
-      schoolLogo: "https://identity.byu.edu/sites/default/files/BYU_monogram.svg",
+      schoolLogo: "https://content.sportslogos.net/logos/32/721/full/byu_cougars_logo_primary_20056084.png",
       location: "Provo, UT",
       period: "2020 - 2025"
     }
