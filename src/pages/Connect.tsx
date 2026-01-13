@@ -75,42 +75,41 @@ const Connect: React.FC = () => {
             </div>
           </div>
 
-          <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
-            {/* Contact Form - Full Width */}
-            <div className="bg-white border-2 border-black p-6 sm:p-10">
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 text-gray-900">
-                Send a Message
-              </h3>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
+              {/* Left Column - Contact Form */}
+              <div className="bg-white border-2 border-black p-6 sm:p-10">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 text-gray-900 text-center">
+                  Send a Message
+                </h3>
               
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="name" className="block text-base sm:text-lg font-bold uppercase tracking-wider mb-2 text-gray-700">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 border-2 border-black text-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                      placeholder="Your name"
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="name" className="block text-base sm:text-lg font-bold uppercase tracking-wider mb-2 text-gray-700">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full px-4 py-3 border-2 border-black text-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                    placeholder="Your name"
+                  />
+                </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-base sm:text-lg font-bold uppercase tracking-wider mb-2 text-gray-700">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 border-2 border-black text-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="email" className="block text-base sm:text-lg font-bold uppercase tracking-wider mb-2 text-gray-700">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border-2 border-black text-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                    placeholder="your.email@example.com"
+                  />
                 </div>
 
                 <div>
@@ -135,7 +134,7 @@ const Connect: React.FC = () => {
                     id="message"
                     name="message"
                     required
-                    rows={5}
+                    rows={6}
                     className="w-full px-4 py-3 border-2 border-black text-lg focus:outline-none focus:ring-2 focus:ring-pink-500 resize-none"
                     placeholder="Tell me about your project or inquiry..."
                   />
@@ -164,11 +163,11 @@ const Connect: React.FC = () => {
               </form>
             </div>
 
-            {/* Contact Info & Social - Three Column Grid */}
-            <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            {/* Right Column - Contact Info & Social */}
+            <div className="space-y-6 sm:space-y-8">
               {/* Contact Details */}
               <div className="bg-white border-2 border-black p-6 sm:p-10">
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 text-gray-900">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 text-gray-900 text-center">
                   Get In Touch
                 </h3>
                 
@@ -177,13 +176,13 @@ const Connect: React.FC = () => {
                     <a
                       key={index}
                       href={info.href}
-                      className="flex items-center group hover:text-gray-600 transition-colors"
+                      className="flex flex-col items-center text-center group hover:text-gray-600 transition-colors"
                     >
-                      <div className="w-14 h-14 sm:w-16 sm:h-16 bg-yellow-300 border-2 border-black flex items-center justify-center mr-5 sm:mr-6 group-hover:bg-yellow-400 transition-colors">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 bg-yellow-300 border-2 border-black flex items-center justify-center mb-3 group-hover:bg-yellow-400 transition-colors">
                         <info.icon className="h-7 w-7 sm:h-8 sm:w-8 text-black" strokeWidth={2} />
                       </div>
                       <div>
-                        <div className="text-sm sm:text-base font-bold uppercase tracking-wider text-gray-600">
+                        <div className="text-sm sm:text-base font-bold uppercase tracking-wider text-gray-600 mb-1">
                           {info.label}
                         </div>
                         <div className="text-lg sm:text-xl font-semibold text-black break-all sm:break-normal">
@@ -197,11 +196,11 @@ const Connect: React.FC = () => {
 
               {/* Social Links */}
               <div className="bg-white border-2 border-black p-6 sm:p-10">
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 text-gray-900">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-6 sm:mb-8 text-gray-900 text-center">
                   Follow Me
                 </h3>
                 
-                <div className="flex gap-4 sm:gap-5">
+                <div className="flex justify-center gap-4 sm:gap-5">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
@@ -219,10 +218,10 @@ const Connect: React.FC = () => {
 
               {/* Availability */}
               <div className="bg-yellow-300 border-2 border-black p-6 sm:p-10">
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-4 sm:mb-5 text-gray-900">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider mb-4 sm:mb-5 text-gray-900 text-center">
                   Availability
                 </h3>
-                <p className="text-lg sm:text-xl font-semibold text-gray-800 leading-relaxed">
+                <p className="text-lg sm:text-xl font-semibold text-gray-800 leading-relaxed text-center">
                   Currently available for new roles and collaborations. 
                   Let's create something special!
                 </p>
