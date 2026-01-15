@@ -74,20 +74,20 @@ const Projects: React.FC = () => {
                   />
                 </div>
                 
-                <div className="p-6 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-wider mb-4 sm:mb-5 leading-tight text-gray-900">
+                <div className="p-8 sm:p-10">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-wider mb-5 sm:mb-6 leading-tight text-gray-900">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-700 mb-5 leading-relaxed text-lg sm:text-xl md:text-2xl">
+                  <p className="text-gray-700 mb-6 sm:mb-8 leading-relaxed text-xl sm:text-2xl md:text-3xl">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2.5 mb-6 sm:mb-8">
+                  <div className="flex flex-wrap gap-3 mb-8 sm:mb-10">
                     {project.tech.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="bg-yellow-300 text-black px-4 sm:px-5 py-2 text-sm sm:text-base font-bold uppercase tracking-wider border border-black"
+                        className="bg-yellow-300 text-black px-5 sm:px-6 py-2.5 sm:py-3 text-base sm:text-lg md:text-xl font-bold uppercase tracking-wider border-2 border-black"
                       >
                         {tech}
                       </span>
@@ -99,9 +99,9 @@ const Projects: React.FC = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center px-5 sm:px-6 py-3 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-bold uppercase tracking-wider text-base sm:text-lg"
+                      className="flex items-center px-6 sm:px-8 py-4 bg-black text-white hover:bg-gray-800 transition-colors border-2 border-black font-bold uppercase tracking-wider text-lg sm:text-xl"
                     >
-                      <Github className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
+                      <Github className="h-6 w-6 sm:h-7 sm:w-7 mr-3" />
                       View Code
                     </a>
                   </div>
