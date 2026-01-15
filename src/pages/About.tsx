@@ -86,7 +86,7 @@ const About: React.FC = () => {
                   Data Analyst & Problem Solver
                 </h2>
                 
-                <div className="space-y-4 sm:space-y-5 text-base sm:text-lg md:text-xl leading-relaxed text-gray-700">
+                <div className="space-y-4 sm:space-y-5 text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-700">
                   <p className="font-medium">
                     I'm a data analyst with a passion for uncovering insights that make a difference. With a bachelor's degree in computer science and a minor in statistics from Brigham Young University. I combine technical precision with a strong sense for visual storytelling; making complex data not just understandable, but impactful.
                   </p>
@@ -139,7 +139,7 @@ const About: React.FC = () => {
                               <div className="font-semibold text-lg sm:text-xl text-gray-700 mb-2">
                                 {item.organization}
                               </div>
-                              <p className="text-sm sm:text-base text-gray-600">
+                              <p className="text-base sm:text-lg md:text-xl text-gray-600">
                                 {item.description}
                               </p>
                             </div>
