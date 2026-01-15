@@ -79,7 +79,7 @@ const Projects: React.FC = () => {
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-700 mb-5 leading-relaxed text-base sm:text-lg">
+                  <p className="text-gray-700 mb-5 leading-relaxed text-lg sm:text-xl md:text-2xl">
                     {project.description}
                   </p>
                   
