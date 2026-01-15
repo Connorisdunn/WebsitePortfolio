@@ -71,9 +71,9 @@ const Experience: React.FC = () => {
               {education.map((edu, index) => (
                 <div key={index} className="bg-white border-2 border-black p-6 sm:p-10">
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-                    {/* Logo */}
+                    {/* Logo - BIGGER */}
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white border-2 border-black p-3 flex items-center justify-center">
+                      <div className="w-24 h-24 sm:w-28 sm:h-28 bg-white border-2 border-black p-4 flex items-center justify-center">
                         <img 
                           src={edu.schoolLogo} 
                           alt={`${edu.school} logo`}
@@ -121,9 +121,9 @@ const Experience: React.FC = () => {
               {experiences.map((exp, index) => (
                 <div key={index} className="bg-white border-2 border-black p-6 sm:p-10 relative">
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-5 sm:mb-7">
-                    {/* Logo */}
+                    {/* Logo - BIGGER */}
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white border-2 border-black p-3 flex items-center justify-center">
+                      <div className="w-24 h-24 sm:w-28 sm:h-28 bg-white border-2 border-black p-4 flex items-center justify-center">
                         <img 
                           src={exp.companyLogo} 
                           alt={`${exp.company} logo`}
@@ -159,11 +159,12 @@ const Experience: React.FC = () => {
                     </div>
                   </div>
                   
+                  {/* Bullets - LARGER TEXT */}
                   <ul className="space-y-4 sm:space-y-5">
                     {exp.bullets.map((bullet, bulletIndex) => (
                       <li key={bulletIndex} className="flex items-start">
                         <div className="w-2.5 h-2.5 bg-yellow-300 border border-black mt-2 mr-4 flex-shrink-0"></div>
-                        <span className="text-base sm:text-lg text-gray-700 leading-relaxed">{bullet}</span>
+                        <span className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">{bullet}</span>
                       </li>
                     ))}
                   </ul>
