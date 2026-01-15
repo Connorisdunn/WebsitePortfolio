@@ -45,7 +45,7 @@ const Home: React.FC = () => {
                 <Briefcase className="h-4 md:h-8 w-4 md:w-8 text-blue-500 transform -rotate-6" />
               </div>
               
-              <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-black uppercase tracking-wider text-gray-800 group-hover:scale-110 group-hover:text-blue-700 transition-all duration-500 relative z-10 text-center leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider text-gray-800 group-hover:scale-110 group-hover:text-blue-700 transition-all duration-500 relative z-10 text-center leading-tight">
                 PROJECTS
               </h2>
             </Link>
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
                 <LinkIcon className="h-7 md:h-14 w-7 md:w-14 text-pink-500 transform rotate-45" />
               </div>
               
-              <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-black uppercase tracking-wider text-gray-800 group-hover:scale-110 group-hover:text-pink-700 transition-all duration-500 relative z-10 text-center leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider text-gray-800 group-hover:scale-110 group-hover:text-pink-700 transition-all duration-500 relative z-10 text-center leading-tight">
                 CONNECT
               </h2>
             </Link>
@@ -84,7 +84,7 @@ const Home: React.FC = () => {
                 <User className="h-3 md:h-6 w-3 md:w-6 text-emerald-500 transform -rotate-12" />
               </div>
               
-              <h2 className="text-base sm:text-xl md:text-3xl lg:text-5xl font-black uppercase tracking-wider text-gray-800 group-hover:scale-110 group-hover:text-green-700 transition-all duration-500 relative z-10 text-center leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider text-gray-800 group-hover:scale-110 group-hover:text-green-700 transition-all duration-500 relative z-10 text-center leading-tight">
                 ABOUT ME
               </h2>
             </Link>
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
                 <Settings className="h-6 md:h-12 w-6 md:w-12 text-violet-500 transform rotate-12" />
               </div>
               
-              <h2 className="text-base sm:text-xl md:text-3xl lg:text-5xl font-black uppercase tracking-wider text-gray-800 group-hover:scale-110 group-hover:text-purple-700 transition-all duration-500 relative z-10 text-center leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider text-gray-800 group-hover:scale-110 group-hover:text-purple-700 transition-all duration-500 relative z-10 text-center leading-tight">
                 EXPERIENCE
               </h2>
             </Link>
