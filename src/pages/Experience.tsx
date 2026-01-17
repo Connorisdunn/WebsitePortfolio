@@ -73,7 +73,7 @@ const Experience: React.FC = () => {
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                     {/* Logo - MUCH BIGGER */}
                     <div className="flex-shrink-0">
-                      <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
+                      <div className="w-32 h-32 sm:w-40 sm:h-40 bg-white border-2 border-black p-4 flex items-center justify-center">
                         <img 
                           src={edu.schoolLogo} 
                           alt={`${edu.school} logo`}
