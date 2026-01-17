@@ -77,7 +77,7 @@ const Experience: React.FC = () => {
                         <img 
                           src={edu.schoolLogo} 
                           alt={`${edu.school} logo`}
-                          className="w-full h-full object-contain"
+                          className="w-full h-full object-cover"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
                           }}
@@ -127,7 +127,7 @@ const Experience: React.FC = () => {
                         <img 
                           src={exp.companyLogo} 
                           alt={`${exp.company} logo`}
-                          className="w-full h-full object-contain"
+                          className="w-full h-full object-cover"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
                           }}
