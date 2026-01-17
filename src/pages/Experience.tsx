@@ -7,7 +7,7 @@ const Experience: React.FC = () => {
     {
       title: "AP Engineer",
       company: "Tesla",
-      companyLogo: `${import.meta.env.BASE_URL}tesla_wordmark.svg`,
+      companyLogo: `${import.meta.env.BASE_URL}tesla_logo.svg`,
       location: "Draper, UT",
       period: "April 2025 - Current",
       bullets: [
